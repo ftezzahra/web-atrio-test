@@ -130,7 +130,7 @@ class PersonnesController extends AbstractController
     public function findByCompanyName(EntityManagerInterface $entityManager, $companyName): Response
     {
         $personnes = $entityManager->getRepository(Personnes::class)->findByCompanyName($companyName);
-        dd($personnes);
+
         if (!$personnes) {
             return new JsonResponse(['message' => 'Aucune personne trouvée pour cette entreprise.'], Response::HTTP_NOT_FOUND);
         }
