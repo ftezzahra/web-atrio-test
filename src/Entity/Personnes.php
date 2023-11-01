@@ -37,7 +37,7 @@ class Personnes
     private $date_de_naissance = null;
 
     /**
-     * @ORM\OneToMany(targetEntity=Emplois::class, mappedBy="personnes")
+     * @ORM\OneToMany(targetEntity=Emplois::class, mappedBy="personne")
      */
     private $emplois;
 
